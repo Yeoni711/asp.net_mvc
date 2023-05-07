@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -213,7 +214,19 @@ namespace CSharpStudy
                 Console.WriteLine("번호 : " + user.No + " / " + "이름 : " + user.Name);
             }
 
+            Console.WriteLine("========================");
 
+
+            ////////////////////////////////////////////////
+            // 계산기 불러오기
+            Calc calc = new Calc(); // 새로운 객체 생성
+            //calc.PrintHello();
+            Console.WriteLine(calc.Plus(10, 20));
+
+            ////////////////////////////////////////////////
+            // 다른 프로젝트에 있는 객체 부르기
+            FirstClass first = new FirstClass(); // 참조 -> 참조추가 -> 프로젝트에서 다른 프로젝트에 있는 레퍼런스 FirstClass를 추가해주고 using에 작성해 주어야 한다, ctrl+. 으로 using FirstLibaray를 사용하면 훨씬 빠르게 사용 가능
+            first.FirstClassPrint();
 
         }
     }
